@@ -10,6 +10,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import woowacourse.kanban.board.model.TaskCardDto
 import woowacourse.kanban.board.ui.AddButton
@@ -30,5 +32,50 @@ fun App() {
         if (showInputWindow) {
             InputWindow(taskCardGroup, true) { showInputWindow = false }
         }
+    }
+}
+
+@Composable
+fun SimpleBox() {
+    Box(
+        modifier = Modifier.size(120.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(100.dp)
+                .background(Color.Blue)
+                .align(Alignment.TopStart)
+        )
+
+        Box(
+            modifier = Modifier
+                .size(100.dp)
+                .background(Color.Green)
+                .align(Alignment.BottomEnd)
+        )
+    }
+}
+
+@Composable
+fun SimpleBox2() {
+    Box(
+        modifier = Modifier.size(200.dp)
+    ) {
+        Box(modifier = Modifier
+            .size(50.dp)
+            .background(Color.Red)
+            .align(Alignment.TopStart)
+        )
+
+        Box(modifier = Modifier
+            .size(50.dp)
+            .background(Color.Yellow)
+            .align(Alignment.Center)
+        )
+
+        Box(modifier = Modifier
+            .size(50.dp)
+            .background(Color.Green)
+            .align(Alignment.BottomEnd))
     }
 }
