@@ -55,6 +55,15 @@ fun SimpleBox() {
         )
     }
 }
+//
+//@Composable
+//fun GroupTheTaskCard(taskCardGroup: List<TaskCard>) {
+//    LazyColumn {
+//        items(taskCardGroup.size) { item ->
+//            CreateTaskCard(taskCard = taskCardGroup[item])
+//        }
+//    }
+//}
 
 @Composable
 fun SimpleBox2() {
